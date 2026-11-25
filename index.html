@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- CONTENT: page title + search description (see CLIENT_INFO.md §1) -->
+  <title>Northlight Painting Co. — Interior &amp; Exterior Painters</title>
+  <meta name="description" content="Northlight is a small crew of career painters. Interior & exterior painting, color consults and specialty finishes — fixed quotes, spotless cleanup.">
+  <meta name="theme-color" content="#f5f4f1">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Northlight Painting Co. — Interior & Exterior Painters">
+  <meta property="og:description" content="A great paint job is invisible. Fixed quotes, hand-cut lines and spotless cleanup.">
+  <meta property="og:image" content="https://www.example.com/assets/img/og-image.jpg">
+  <meta property="og:url" content="https://www.example.com/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts are self-hosted (assets/fonts) — no third-party requests -->
+  <link rel="preload" href="assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/newsreader-var-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="preload" as="image" href="assets/img/hero-wall.webp" type="image/webp">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    // Flag JS + reduced-motion early so the first paint already uses the right layout.
+    document.documentElement.classList.add('js');
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('reduced-motion');
+    }
+  </script>
+  <script src="assets/js/main.js" defer></script>
+
+  <!-- CONTENT: structured data for search engines (see CLIENT_INFO.md §1) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HousePainter",
+    "name": "Northlight Painting Co.",
+    "url": "https://www.example.com/",
+    "image": "https://www.example.com/assets/img/og-image.jpg",
+    "telephone": "+1-402-555-0148",
+    "email": "hello@northlightpainting.co",
+    "areaServed": "Greater metro area",
+    "priceRange": "$$",
+    "openingHours": ["Mo-Fr 07:30-17:30", "Sa 09:00-14:00"],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "240" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================== HEADER ============================== -->
+  <header class="site-header is-over-hero" data-header>
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="Northlight — back to top">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__name">Northlight</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#services">Services</a></li>
+          <li><a class="nav__link" href="#process">Process</a></li>
+          <li><a class="nav__link" href="#work">Work</a></li>
+        </ul>
+        <a class="btn btn--outline btn--sm nav__cta" href="#quote">Get a quote</a>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <span class="menu-toggle__bar" aria-hidden="true"></span>
+        <span class="menu-toggle__bar" aria-hidden="true"></span>
+        <span class="sr-only">Open menu</span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+      <ul class="mobile-menu__list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#quote">Get a quote</a></li>
+      </ul>
+      <!-- CONTENT: phone -->
+      <a class="mobile-menu__phone" href="tel:+14025550148">(402) 555-0148</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================== HERO (pinned roller animation) ============================== -->
+    <!-- CONTENT: hero slides (CLIENT_INFO.md §2) -->
+    <section class="hero" id="top" data-hero aria-label="Introduction">
+      <div class="hero__sticky">
+        <div class="hero__wall" aria-hidden="true"></div>
+
+        <div class="hero__paint" aria-hidden="true" data-paint>
+          <div class="hero__paint-inner" data-paint-inner></div>
+        </div>
+
+        <!-- Paint roller (inline SVG so it always matches the paint colour) -->
+        <div class="roller" aria-hidden="true" data-roller>
+          <div class="roller__body" data-roller-body>
+            <svg class="roller__svg" viewBox="0 0 114 196" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+              <defs>
+                <linearGradient id="rCover" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#365c30"/>
+                  <stop offset=".16" stop-color="#55874b"/>
+                  <stop offset=".36" stop-color="#80b173"/>
+                  <stop offset=".58" stop-color="#619356"/>
+                  <stop offset=".86" stop-color="#44703b"/>
+                  <stop offset="1" stop-color="#2f5229"/>
+                </linearGradient>
+                <linearGradient id="rEnds" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#000" stop-opacity=".28"/>
+                  <stop offset=".07" stop-color="#000" stop-opacity="0"/>
+                  <stop offset=".93" stop-color="#000" stop-opacity="0"/>
+                  <stop offset="1" stop-color="#000" stop-opacity=".3"/>
+                </linearGradient>
+                <pattern id="rNap" width="7" height="5" patternUnits="userSpaceOnUse" data-roller-nap>
+                  <path d="M0 1.2h3.2M3.6 3.7h3" stroke="#fff" stroke-opacity=".05" stroke-width=".6" stroke-linecap="round"/>
+                  <path d="M1.4 2.6h2.2M4.8 .4h1.6" stroke="#000" stroke-opacity=".05" stroke-width=".5" stroke-linecap="round"/>
+                </pattern>
+                <linearGradient id="rMetal" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#7e8380"/>
+                  <stop offset=".45" stop-color="#eef0ee"/>
+                  <stop offset="1" stop-color="#727774"/>
+                </linearGradient>
+                <linearGradient id="rHandle" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#070807"/>
+                  <stop offset=".32" stop-color="#3d413e"/>
+                  <stop offset=".5" stop-color="#232624"/>
+                  <stop offset="1" stop-color="#050605"/>
+                </linearGradient>
+              </defs>
+
+              <g class="roller__frame">
+                <!-- wire frame -->
+                <path d="M99 17H106.5Q109.5 17 109.5 20V44Q109.5 47.2 106.4 48.4L53.6 67.4Q50 68.8 50 72.6V101" stroke="#9fa4a1" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M99 16.3H106.3Q108.8 16.3 108.8 19V43.6Q108.8 46.4 106 47.5L53.3 66.6Q49.3 68 49.3 72V100" stroke="#f4f6f4" stroke-opacity=".75" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- ferrule -->
+                <rect x="44.6" y="99" width="10.8" height="14" rx="1.6" fill="url(#rMetal)"/>
+                <rect x="44.6" y="103" width="10.8" height="1" fill="#000" fill-opacity=".18"/>
+                <!-- handle -->
+                <path d="M45.3 112.5h9.4c.4 5.2.2 9.6 1.7 15.3 1.4 5.4 1.9 28.6 1.7 56.2 0 6.3-2.9 10.4-8.1 10.4s-8.1-4.1-8.1-10.4c-.2-27.6.3-50.8 1.7-56.2 1.5-5.7 1.3-10.1 1.7-15.3z" fill="url(#rHandle)"/>
+                <path d="M47.2 128c-.9 5-1.3 25-1.1 52" stroke="#fff" stroke-opacity=".12" stroke-width="1.2" stroke-linecap="round"/>
+                <ellipse cx="50" cy="185.5" rx="1.7" ry="2.6" fill="#000" fill-opacity=".55"/>
+              </g>
+
+              <g class="roller__cover">
+                <rect x="0" y="2" width="100" height="30" rx="5.5" fill="url(#rCover)"/>
+                <rect x="0" y="2" width="100" height="30" rx="5.5" fill="url(#rNap)"/>
+                <rect x="0" y="2" width="100" height="30" rx="5.5" fill="url(#rEnds)"/>
+                <rect x="99" y="11" width="4.5" height="12" rx="1.3" fill="url(#rMetal)"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="hero__slides">
+          <div class="hero__slide hero__slide--intro" data-slide="0">
+            <p class="eyebrow eyebrow--light">Northlight Painting Co.</p>
+            <h1 class="hero__title">
+              <span class="hero__line">The wall is</span>
+              <span class="hero__line"><em>a blank canvas.</em></span>
+            </h1>
+          </div>
+
+          <div class="hero__slide" data-slide="1">
+            <p class="hero__title"><span class="hero__line">One <em>true</em></span> <span class="hero__line">color.</span></p>
+            <p class="hero__sub">We mix, test, and match to the light in your room — so the shade you choose is the shade you live with.</p>
+          </div>
+
+          <div class="hero__slide" data-slide="2">
+            <p class="hero__title"><span class="hero__line">Lines so clean</span> <span class="hero__line">they <em>disappear.</em></span></p>
+            <p class="hero__sub">Edges cut by hand. No tape ghosting, no roller stipple, no missed spots.</p>
+          </div>
+
+          <div class="hero__slide hero__slide--end" data-slide="3">
+            <p class="hero__title hero__title--sm"><span class="hero__line">Done right, <em>the first time.</em></span></p>
+            <p class="hero__sub">Interior &amp; exterior painting across the city. Fully insured. Spotless cleanup. Guaranteed.</p>
+            <a class="btn btn--light hero__cta" href="#quote">
+              Book your estimate
+              <svg class="icon icon--arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== INTRO + STATS ============================== -->
+    <!-- CONTENT: CLIENT_INFO.md §3 -->
+    <section class="section intro" id="about" aria-labelledby="intro-title">
+      <div class="container">
+        <p class="eyebrow" data-reveal>Painters, not pretenders</p>
+        <h2 class="h2 intro__title" id="intro-title" data-reveal style="--delay:.08s">
+          A great paint job is <strong>invisible.</strong> You only notice the bad ones.
+        </h2>
+        <div class="intro__row">
+          <p class="lead intro__text" data-reveal style="--delay:.16s">
+            Northlight is a small crew of career painters who treat your home like ours — drop cloths down,
+            corners sharp, and not a fleck of green where it doesn't belong.
+          </p>
+          <dl class="stats">
+            <div class="stat" data-reveal style="--delay:.2s">
+              <dt class="stat__value"><span data-count="12">12</span>yr</dt>
+              <dd class="stat__label">Average crew<br>experience</dd>
+            </div>
+            <div class="stat" data-reveal style="--delay:.28s">
+              <dt class="stat__value"><span data-count="800">800</span>+</dt>
+              <dd class="stat__label">Homes &amp;<br>businesses painted</dd>
+            </div>
+            <div class="stat" data-reveal style="--delay:.36s">
+              <dt class="stat__value"><span data-count="5.0" data-decimals="1">5.0</span>★</dt>
+              <dd class="stat__label">Across 240<br>local reviews</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SERVICES ============================== -->
+    <!-- CONTENT: CLIENT_INFO.md §4 -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow" data-reveal>What we do</p>
+            <h2 class="h2" id="services-title" data-reveal style="--delay:.08s">Every surface,<br>finished properly.</h2>
+          </div>
+          <p class="section-head__note" data-reveal style="--delay:.16s">From a single accent wall to a full repaint inside and out — one crew, one standard.</p>
+        </div>
+
+        <ul class="cards">
+          <li class="card" data-reveal style="--delay:.05s">
+            <span class="card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M3.5 10.5 12 4l8.5 6.5"/><path d="M5.5 9v11h13V9"/><path d="M10 20v-5.5h4V20"/></svg>
+            </span>
+            <h3 class="card__title">Interior Painting</h3>
+            <p class="card__text">Walls, ceilings, trim, doors and cabinetry. Low-VOC paints, dust-controlled prep, and furniture handled with care.</p>
+          </li>
+          <li class="card" data-reveal style="--delay:.15s">
+            <span class="card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M8 3v18M16 3v18M8 7.5h8M8 12h8M8 16.5h8"/></svg>
+            </span>
+            <h3 class="card__title">Exterior &amp; Siding</h3>
+            <p class="card__text">Pressure-wash, scrape, prime and coat. Weather-rated finishes that hold their color through every season.</p>
+          </li>
+          <li class="card" data-reveal style="--delay:.25s">
+            <span class="card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M15.2 4.2a2.5 2.5 0 0 1 3.6 3.6L10 16.6 7.4 14z"/><path d="M7.4 14c-2.2.3-3.4 1.8-3.4 3.6 0 1.1-.5 1.9-1.4 2.4 2.9 1 6.9.6 7.4-3.4"/></svg>
+            </span>
+            <h3 class="card__title">Color &amp; Finishes</h3>
+            <p class="card__text">On-site color consults, custom mixing, and specialty finishes — limewash, matte, eggshell, or high-gloss.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== PROCESS ============================== -->
+    <!-- CONTENT: CLIENT_INFO.md §5 -->
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <p class="eyebrow" data-reveal>How it goes</p>
+        <h2 class="h2" id="process-title" data-reveal style="--delay:.08s">Four steps. No surprises.</h2>
+
+        <ol class="steps">
+          <li class="step" data-reveal style="--delay:.05s">
+            <span class="step__num">01</span>
+            <h3 class="step__title">Walkthrough</h3>
+            <p class="step__text">We visit, measure, and listen. You get a fixed written quote — no vague hourly games.</p>
+          </li>
+          <li class="step" data-reveal style="--delay:.15s">
+            <span class="step__num">02</span>
+            <h3 class="step__title">Prep</h3>
+            <p class="step__text">Patch, sand, mask and prime. The boring part nobody sees is where the finish is won.</p>
+          </li>
+          <li class="step" data-reveal style="--delay:.25s">
+            <span class="step__num">03</span>
+            <h3 class="step__title">Paint</h3>
+            <p class="step__text">Cut-ins by hand, even rolls, two full coats. We photograph progress daily.</p>
+          </li>
+          <li class="step" data-reveal style="--delay:.35s">
+            <span class="step__num">04</span>
+            <h3 class="step__title">Walk &amp; clean</h3>
+            <p class="step__text">We inspect together under the room's own light, touch up, and leave it spotless.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================== RECENT WORK ============================== -->
+    <!-- CONTENT: CLIENT_INFO.md §6 (photos live in assets/img/) -->
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <p class="eyebrow" data-reveal>Recent work</p>
+        <h2 class="h2" id="work-title" data-reveal style="--delay:.08s">Rooms we're proud of.</h2>
+
+        <ul class="gallery" data-gallery>
+          <li class="gallery__item gallery__item--wide" data-reveal>
+            <button class="gallery__btn" type="button" data-full="assets/img/work-1.jpg" data-caption="Living room repaint · Riverside">
+              <picture>
+                <source type="image/webp" srcset="assets/img/work-1-760.webp 760w, assets/img/work-1.webp 1800w" sizes="(max-width: 700px) 100vw, 66vw">
+                <img src="assets/img/work-1.jpg" alt="Bright living room with soft gray walls, a gallery wall of framed prints and a cream sectional sofa" width="1800" height="1018" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption"><span>Living room repaint</span><span>Riverside</span></span>
+            </button>
+          </li>
+          <li class="gallery__item gallery__item--tall" data-reveal style="--delay:.1s">
+            <button class="gallery__btn" type="button" data-full="assets/img/work-2.jpg" data-caption="Olive feature walls · Old Town">
+              <picture>
+                <source type="image/webp" srcset="assets/img/work-2-760.webp 760w, assets/img/work-2.webp 1100w" sizes="(max-width: 700px) 50vw, 33vw">
+                <img src="assets/img/work-2.jpg" alt="Cozy living room with olive-gray painted walls and woven rattan pendant lights" width="1100" height="1375" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption"><span>Olive feature walls</span><span>Old Town</span></span>
+            </button>
+          </li>
+          <li class="gallery__item" data-reveal style="--delay:.05s">
+            <button class="gallery__btn" type="button" data-full="assets/img/work-3.jpg" data-caption="Lacquered emerald shelving · Maple Heights">
+              <picture>
+                <source type="image/webp" srcset="assets/img/work-3-760.webp 760w, assets/img/work-3.webp 1200w" sizes="(max-width: 700px) 50vw, 33vw">
+                <img src="assets/img/work-3.jpg" alt="White painted brick wall above a glossy emerald green shelf with dried pampas grass" width="1200" height="896" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption"><span>Lacquered emerald shelving</span><span>Maple Heights</span></span>
+            </button>
+          </li>
+          <li class="gallery__item" data-reveal style="--delay:.15s">
+            <button class="gallery__btn" type="button" data-full="assets/img/work-4.jpg" data-caption="Kitchen &amp; trim refresh · Lakeview">
+              <picture>
+                <source type="image/webp" srcset="assets/img/work-4-760.webp 760w, assets/img/work-4.webp 1200w" sizes="(max-width: 700px) 50vw, 33vw">
+                <img src="assets/img/work-4.jpg" alt="Modern kitchen with crisp white walls and cabinets, dark wood floor and a black bar stool" width="1200" height="896" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption"><span>Kitchen &amp; trim refresh</span><span>Lakeview</span></span>
+            </button>
+          </li>
+          <li class="gallery__item" data-reveal style="--delay:.25s">
+            <button class="gallery__btn" type="button" data-full="assets/img/work-5.jpg" data-caption="Whole-floor repaint · Northgate">
+              <picture>
+                <source type="image/webp" srcset="assets/img/work-5-760.webp 760w, assets/img/work-5.webp 1200w" sizes="(max-width: 700px) 50vw, 33vw">
+                <img src="assets/img/work-5.jpg" alt="Sunlit open living space with white walls, built-in cabinetry, oak floors and a blue velvet armchair" width="1200" height="896" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption"><span>Whole-floor repaint</span><span>Northgate</span></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== TESTIMONIAL BAND ============================== -->
+    <!-- CONTENT: CLIENT_INFO.md §7 -->
+    <section class="testimonials" aria-label="What clients say" data-testimonials>
+      <div class="testimonials__paint" aria-hidden="true" data-band-paint></div>
+      <div class="container testimonials__inner">
+        <div class="stars" aria-label="Rated 5 out of 5">
+          <span aria-hidden="true">★★★★★</span>
+        </div>
+        <div class="quotes" data-quotes aria-live="polite">
+          <figure class="quote is-active">
+            <blockquote><p>“They left the place cleaner than they found it. The walls look like glass.”</p></blockquote>
+            <figcaption>— Marian R., whole-home repaint · Riverside</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote><p>“Fixed price, on time, and the cut lines along our ceilings are perfect. We've already booked the exterior.”</p></blockquote>
+            <figcaption>— Dev &amp; Priya S., interior repaint · Old Town</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote><p>“They matched a 40-year-old trim color by eye and nobody can tell where the old paint ends.”</p></blockquote>
+            <figcaption>— Tom H., trim &amp; doors · Maple Heights</figcaption>
+          </figure>
+        </div>
+        <div class="quotes__dots" role="tablist" aria-label="Choose a testimonial" data-quote-dots></div>
+      </div>
+    </section>
+
+    <!-- ============================== QUOTE / CONTACT ============================== -->
+    <!-- CONTENT: CLIENT_INFO.md §8 -->
+    <section class="section contact" id="quote" aria-labelledby="quote-title">
+      <div class="container contact__grid">
+        <div class="contact__intro">
+          <p class="eyebrow" data-reveal>Free estimate</p>
+          <h2 class="h2" id="quote-title" data-reveal style="--delay:.08s">Let's get<br>your quote.</h2>
+          <p class="lead" data-reveal style="--delay:.14s">Tell us about the space. We'll come by, take a look, and send a fixed price within 48 hours — no pressure, no call-center.</p>
+          <ul class="contact__list" data-reveal style="--delay:.2s">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16.4v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.6 2 2 0 0 1 3.1 1.4h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.1 9.3a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              <a href="tel:+14025550148">(402) 555-0148</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+              <a href="mailto:hello@northlightpainting.co">hello@northlightpainting.co</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Serving the greater metro area</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="form-card" data-reveal style="--delay:.12s">
+          <!-- To receive submissions, add data-endpoint="https://formspree.io/f/XXXX" (see README) -->
+          <form class="quote-form" data-quote-form novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="f-name">Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required>
+                <p class="field__error" id="f-name-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 000-0000" inputmode="tel">
+                <p class="field__error" id="f-phone-error" aria-live="polite"></p>
+              </div>
+              <div class="field field--full">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" placeholder="jane@email.com" required>
+                <p class="field__error" id="f-email-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-type">Project type</label>
+                <select id="f-type" name="project_type">
+                  <option>Interior</option>
+                  <option>Exterior</option>
+                  <option>Interior + Exterior</option>
+                  <option>Cabinets &amp; trim</option>
+                  <option>Commercial</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-size">Rough size</label>
+                <select id="f-size" name="size">
+                  <option>1–2 rooms</option>
+                  <option>3–5 rooms</option>
+                  <option>Whole home</option>
+                  <option>Exterior only</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="field field--full">
+                <label for="f-notes">Anything we should know?</label>
+                <textarea id="f-notes" name="notes" rows="3" placeholder="Colors you're considering, timeline, ceilings…"></textarea>
+              </div>
+            </div>
+            <!-- Honeypot field to stop simple spam bots (hidden from people) -->
+            <div class="hp" aria-hidden="true">
+              <label for="f-company">Company</label>
+              <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="btn btn--primary btn--block" type="submit" data-submit>
+              <span class="btn__label">Request my estimate</span>
+            </button>
+            <p class="form-note">No spam. We reply within one business day.</p>
+            <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+          </form>
+
+          <div class="form-success" data-form-success hidden tabindex="-1">
+            <span class="form-success__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+            </span>
+            <h3 class="form-success__title">Thanks<span data-success-name></span> — we've got it.</h3>
+            <p>We'll reply within one business day to book your walkthrough. Talk soon.</p>
+            <button class="btn btn--outline btn--sm" type="button" data-form-reset>Send another request</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <!-- CONTENT: CLIENT_INFO.md §1 -->
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="brand brand--dark" href="#top">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__name">Northlight</span>
+        </a>
+        <p>Interior &amp; exterior painters. Small crew, careful hands, clean lines.</p>
+      </div>
+      <nav class="site-footer__col" aria-label="Footer">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#quote">Get a quote</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__col">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+14025550148">(402) 555-0148</a></li>
+          <li><a href="mailto:hello@northlightpainting.co">hello@northlightpainting.co</a></li>
+          <li>Serving the greater metro area</li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h3>Hours</h3>
+        <ul>
+          <li>Mon–Fri · 7:30–5:30</li>
+          <li>Sat · 9:00–2:00</li>
+          <li>Sun · Closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container site-footer__bottom">
+      <p>© <span data-year>2026</span> Northlight Painting Co. · Licensed &amp; fully insured</p>
+      <ul class="site-footer__social">
+        <li><a href="#" aria-label="Instagram (placeholder link)">Instagram</a></li>
+        <li><a href="#" aria-label="Facebook (placeholder link)">Facebook</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Gallery lightbox -->
+  <dialog class="lightbox" data-lightbox aria-label="Project photo">
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" alt="" data-lightbox-img>
+      <figcaption class="lightbox__caption" data-lightbox-caption></figcaption>
+    </figure>
+    <button class="lightbox__btn lightbox__btn--close" type="button" data-lightbox-close aria-label="Close">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <button class="lightbox__btn lightbox__btn--prev" type="button" data-lightbox-prev aria-label="Previous photo">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <button class="lightbox__btn lightbox__btn--next" type="button" data-lightbox-next aria-label="Next photo">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </dialog>
+</body>
+</html>
