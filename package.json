@@ -1,0 +1,14 @@
+{
+  "name": "northlight-painting-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "One-page website for a painting company with a scroll-driven paint roller hero.",
+  "author": "Rajdeep Sah",
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test": "node tests/smoke.mjs"
+  }
+}
