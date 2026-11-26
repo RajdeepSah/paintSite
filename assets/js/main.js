@@ -257,6 +257,7 @@
   function setMenu(open) {
     if (!header || !menuToggle) return;
     header.classList.toggle('menu-open', open);
+    root.classList.toggle('menu-locked', open);
     menuToggle.setAttribute('aria-expanded', String(open));
     $('.sr-only', menuToggle).textContent = open ? 'Close menu' : 'Open menu';
   }
@@ -565,6 +566,7 @@
   function onResize() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
+      if (window.innerWidth > 820) setMenu(false);
       if (Hero.resize) Hero.resize();
       updateHeader();
       updateBand();
