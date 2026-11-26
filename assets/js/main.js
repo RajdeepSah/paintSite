@@ -214,15 +214,15 @@
     }
 
     function resize() {
-      if (reduced()) return;
+      if (reduced()) { layout(); return; } // static stripe still gets its ragged edges
       layout();
       readScroll();
       current = target;
       render(current, 16.7);
     }
 
+    layout();
     if (!reduced()) {
-      layout();
       readScroll();
       current = target;
       render(current, 16.7);

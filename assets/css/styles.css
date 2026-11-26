@@ -31,8 +31,8 @@
 /* 1. Design tokens -------------------------------------------------------- */
 :root {
   --green: #4f7d46;          /* paint colour: stripe, roller, icons */
-  --green-btn: #4b8642;      /* main button */
-  --green-btn-hover: #3f733a;
+  --green-btn: #437c3b;      /* main button (white text passes WCAG AA) */
+  --green-btn-hover: #376a31;
   --green-deep: #3d6634;     /* testimonial band */
   --green-pale: #e2eed9;     /* italic words on the hero */
 
@@ -43,7 +43,7 @@
   --line: #d8d6d0;
   --ink: #1f2420;            /* main text */
   --ink-2: #555b56;          /* body text */
-  --ink-3: #7b807b;          /* labels, eyebrows */
+  --ink-3: #636863;          /* labels, eyebrows */
   --wall: #b5b0a7;           /* hero wall fallback colour */
   --error: #b0432c;
 
@@ -78,6 +78,7 @@ body {
 img, svg, picture { display: block; max-width: 100%; }
 img { height: auto; }
 a { color: inherit; text-decoration: none; }
+a[href^="tel:"] { white-space: nowrap; }
 button, input, select, textarea { font: inherit; color: inherit; }
 button { cursor: pointer; }
 h1, h2, h3, p, ul, ol, dl, dd, figure, blockquote { margin: 0; }
@@ -243,10 +244,12 @@ html.menu-locked { overflow: hidden; }
   position: absolute; inset: 0; z-index: -2;
   background-color: var(--wall);
   background-image:
+    radial-gradient(70% 55% at 50% 40%, rgba(45, 40, 32, .16), rgba(45, 40, 32, 0) 75%),
     radial-gradient(120% 90% at 70% 20%, rgba(255, 255, 255, .0) 0%, rgba(60, 54, 44, .13) 100%),
     linear-gradient(rgba(70, 64, 54, .12), rgba(70, 64, 54, .12)),
     url("../img/hero-wall.jpg");
   background-image:
+    radial-gradient(70% 55% at 50% 40%, rgba(45, 40, 32, .16), rgba(45, 40, 32, 0) 75%),
     radial-gradient(120% 90% at 70% 20%, rgba(255, 255, 255, .0) 0%, rgba(60, 54, 44, .13) 100%),
     linear-gradient(rgba(70, 64, 54, .12), rgba(70, 64, 54, .12)),
     image-set(url("../img/hero-wall.webp") type("image/webp"), url("../img/hero-wall.jpg") type("image/jpeg"));
@@ -256,7 +259,8 @@ html.menu-locked { overflow: hidden; }
 @media (max-width: 700px) {
   .hero__wall {
     background-image:
-      radial-gradient(120% 90% at 70% 20%, rgba(255, 255, 255, .0) 0%, rgba(60, 54, 44, .13) 100%),
+      radial-gradient(70% 55% at 50% 40%, rgba(45, 40, 32, .16), rgba(45, 40, 32, 0) 75%),
+    radial-gradient(120% 90% at 70% 20%, rgba(255, 255, 255, .0) 0%, rgba(60, 54, 44, .13) 100%),
       linear-gradient(rgba(70, 64, 54, .12), rgba(70, 64, 54, .12)),
       url("../img/hero-wall-1000.webp");
   }
@@ -538,7 +542,7 @@ html:not(.js) .hero__slide--end, .reduced-motion .hero__slide--end { top: 70%; }
   background-repeat: no-repeat; background-position: right 14px center;
   cursor: pointer;
 }
-.field ::placeholder { color: #9a9e99; opacity: 1; }
+.field ::placeholder { color: #767a75; opacity: 1; }
 .field input:hover, .field select:hover, .field textarea:hover { background-color: #e0dfda; }
 .field input:focus, .field select:focus, .field textarea:focus {
   outline: none; background-color: #fff; border-color: var(--green);

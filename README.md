@@ -9,6 +9,8 @@ up the "wall", then rolls down and paints a green stripe while the headline chan
 
 Author: **Rajdeep Sah**
 
+![Hero scroll sequence](docs/screenshots/desktop-hero-sequence.jpg)
+
 ---
 
 ## Quick start
@@ -29,7 +31,8 @@ Then open <http://localhost:8080>.
 npm test
 ```
 
-Runs `tests/smoke.mjs` with Playwright (desktop + mobile): checks for console errors,
+Runs `tests/smoke.mjs` with Playwright — 30 checks on desktop, mobile, reduced motion and
+with JavaScript turned off: console errors,
 broken images, horizontal overflow, the hero animation states, header behaviour,
 mobile menu, gallery lightbox and the quote form. Screenshots are written to
 `tests/output/` (ignored by git).
@@ -44,6 +47,7 @@ assets/
   css/styles.css        ← all styles; colours/fonts are CSS variables at the top
   js/main.js            ← hero roller animation, reveals, carousel, lightbox, form
   img/                  ← optimised images (.webp + .jpg fallbacks), favicon
+  fonts/                ← self-hosted Newsreader + Inter (with licence files)
 scripts/serve.mjs       ← tiny local server (no dependencies)
 tests/smoke.mjs         ← automated browser checks
 CLIENT_INFO.md          ← every placeholder value + image prompts (edit before handover)
@@ -52,6 +56,8 @@ docs/
   PROGRESS.md           ← what's done, what's left, how to continue
   VIDEO_REFERENCE.md    ← design notes taken from the reference video
   reference/            ← still frames from the reference video
+  screenshots/          ← screenshots of the finished site
+robots.txt
 ```
 
 ## Deploying
@@ -68,6 +74,11 @@ add it to the form in `index.html`:
 ```html
 <form class="quote-form" data-endpoint="https://formspree.io/f/your-id" …>
 ```
+
+## Status
+
+Complete and tested — see [`docs/PROGRESS.md`](docs/PROGRESS.md) for what was built, QA results
+and the short list of client-specific items to do before launch.
 
 ## Browser support
 

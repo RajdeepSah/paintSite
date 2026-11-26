@@ -128,7 +128,9 @@ Defined at the top of `assets/css/styles.css`:
 
 | Token | Current | Used for |
 | --- | --- | --- |
-| `--green` | `#4f7d46` | paint stripe, roller, icons, buttons |
+| `--green` | `#4f7d46` | icons, accents |
+| Paint stripe colours | `#4b7643` → `#71a364` | top of `assets/js/main.js` (`PAINT_TOP/MID/BOTTOM`) and the roller gradient in `index.html` |
+| `--green-btn` | `#437c3b` | main button |
 | `--green-deep` | `#3d6634` | testimonial band |
 | `--paper` | `#f5f4f1` | page background |
 | `--ink` | `#1f2420` | main text |
